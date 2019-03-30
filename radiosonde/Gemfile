@@ -1,0 +1,4 @@
+source 'https://rubygems.org'
+
+gem 'radiosonde', '0.2.0.beta5'
+gem 'aws-sdk', '~> 3'
