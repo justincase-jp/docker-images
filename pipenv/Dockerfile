@@ -1,5 +1,6 @@
 FROM python:3.7-alpine
 RUN pip install pipenv
+RUN apk update && apk add git openssh
 
 WORKDIR /app
 
