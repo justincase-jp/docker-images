@@ -1,9 +1,12 @@
-FROM alpine:3.10.1
+FROM adoptopenjdk/openjdk8:jdk8u222-b10-alpine-slim
 
 RUN set -e;\
- apk add --no-cache openjdk8=8.212.04-r0 nodejs=10.16.0-r0;\
- apk add --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community gradle=5.4.1-r0;\
+ apk add --no-cache nodejs=10.16.0-r0;\
  apk add --no-cache --virtual deps npm=10.16.0-r0;\
  npm c set unsafe-perm true;\
- npm i -g aws-cdk@1.2.0;\
- apk del deps
+ npm i -g aws-cdk@1.3.0;\
+ apk del deps;\
+ mkdir /opt/gradle; cd /opt/gradle;\
+ Z=gradle-5.5.1;\
+ wget -qO- https://services.gradle.org/distributions/"$Z"-bin.zip | unzip -;\
+ chmod +x "$Z"/bin/gradle; ln -s "$PWD/$Z/bin/gradle" /usr/local/bin/
