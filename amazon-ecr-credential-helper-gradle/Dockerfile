@@ -1,6 +1,7 @@
-FROM docker:19.03.3
+FROM justincasetech/gradle:5.6.2
 
 RUN set -eC;\
+ apk add --no-cache docker-cli=18.09.8-r0;\
  mkdir -p ~/.docker;\
  echo '{"credsStore":"ecr-login"}' > ~/.docker/config.json;\
  cd /usr/local/bin/;\
