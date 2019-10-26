@@ -1,4 +1,4 @@
-FROM justincasetech/gradle:5.6.2
+FROM justincasetech/gradle:5.6.3
 
 RUN set -eC;\
  apk add --no-cache docker-cli=18.09.8-r0;\
