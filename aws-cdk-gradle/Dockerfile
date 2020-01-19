@@ -1,4 +1,4 @@
-FROM justincasetech/gradle:6.0.1
+FROM justincasetech/gradle:6.1
 
 RUN set -e;\
  apk add --no-cache nodejs=10.16.3-r0;\
