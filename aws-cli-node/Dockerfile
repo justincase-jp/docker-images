@@ -1,4 +1,6 @@
-FROM node:12.14.1
-ARG AWSCLI_VERSION=1.18.3
-#install aws cli
-RUN apt update && apt upgrade -y && apt install -y python3-pip && pip3 install awscli==${AWSCLI_VERSION} --upgrade
+FROM node:12.16.2-stretch
+
+RUN set -e;\
+ apt-get update;\
+ apt-get install -y python3-pip=9.0.1-2+deb9u1;\
+ pip3 install awscli==1.18.39
