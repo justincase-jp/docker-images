@@ -693,7 +693,7 @@ GEM
     diffy (3.3.0)
     hashie (3.6.0)
     jmespath (1.4.0)
-    json (2.1.0)
+    json (2.3.1)
     radiosonde (0.2.0.beta5)
       aws-sdk-cloudwatch
       diffy
