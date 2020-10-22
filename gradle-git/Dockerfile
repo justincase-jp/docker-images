@@ -1,6 +1,6 @@
 FROM adoptopenjdk/openjdk8:jdk8u265-b01-alpine-slim
 
-RUN apk add --no-cache git openssh
+RUN apk add --no-cache git openssh-client
 RUN set -e;\
  apk add --no-cache ca-certificates;\
  mkdir /opt/gradle; cd /opt/gradle;\
